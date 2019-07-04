@@ -1,0 +1,17 @@
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.csproj.CoreCompileInputs.cache
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.AssemblyInfoInputs.cache
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.AssemblyInfo.cs
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\bin\Debug\netcoreapp2.2\WebJet_Test_Vijay.deps.json
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\bin\Debug\netcoreapp2.2\WebJet_Test_Vijay.runtimeconfig.json
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\bin\Debug\netcoreapp2.2\WebJet_Test_Vijay.runtimeconfig.dev.json
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\bin\Debug\netcoreapp2.2\WebJet_Test_Vijay.dll
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\bin\Debug\netcoreapp2.2\WebJet_Test_Vijay.pdb
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.RazorAssemblyInfo.cache
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.RazorAssemblyInfo.cs
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.RazorTargetAssemblyInfo.cache
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.dll
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.pdb
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\bin\Debug\netcoreapp2.2\log4net.dll
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\bin\Debug\netcoreapp2.2\log4net.xml
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.csproj.CopyComplete
+C:\Users\ramachandranv_admin\source\repos\WebJet_Test_Vijay\WebJet_Test_Vijay\obj\Debug\netcoreapp2.2\WebJet_Test_Vijay.csprojAssemblyReference.cache

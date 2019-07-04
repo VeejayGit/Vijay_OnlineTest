@@ -1,0 +1,57 @@
+<mat-card>
+  <h1 *ngIf="movieModel">{{movieModel.Title}}</h1>
+  <app-movie-service-availability [services]="services"></app-movie-service-availability>
+  <mat-card class="cheapest-panel" *ngIf="cheapestPriceMovie">
+    <span>Cheapest Price:</span>
+    <span>{{cheapestPriceMovie.Price | currency:''}}</span>
+    <span>{{cheapestPriceMovie.MovieServiceTitle}}</span>
+  </mat-card>
+  <div *ngIf="movieModel">
+    <table class="movie-details-table">
+      <tr><td><b>Title:</b></td><td>{{movieModel.Title}}</td></tr>
+      <tr><td><b>Year:</b></td><td>{{movieModel.Year}}</td></tr>
+      <tr><td><b>Rated:</b></td><td>{{movieModel.Rated}}</td></tr>
+      <tr><td><b>Released:</b></td><td>{{movieModel.Released}}</td></tr>
+      <tr><td><b>Runtime:</b></td><td>{{movieModel.Runtime}}</td></tr>
+      <tr><td><b>Genre:</b></td><td>{{movieModel.Genre}}</td></tr>
+      <tr><td><b>Director:</b></td><td>{{movieModel.Director}}</td></tr>
+      <tr><td><b>Writer:</b></td><td>{{movieModel.Writer}}</td></tr>
+      <tr><td><b>Actors:</b></td><td>{{movieModel.Actors}}</td></tr>
+      <tr><td><b>Plot:</b></td><td>{{movieModel.Plot}}</td></tr>
+      <tr><td><b>Language:</b></td><td>{{movieModel.Language}}</td></tr>
+      <tr><td><b>Country:</b></td><td>{{movieModel.Country}}</td></tr>
+      <tr><td><b>Awards:</b></td><td>{{movieModel.Awards}}</td></tr>
+      <tr><td><b>Metascore:</b></td><td>{{movieModel.Metascore}}</td></tr>
+      <tr><td><b>Rating:</b></td><td>{{movieModel.Rating}}</td></tr>
+      <tr><td><b>Votes:</b></td><td>{{movieModel.Votes}}</td></tr>
+      <tr><td><b>ID:</b></td><td>{{movieModel.ID}}</td></tr>
+      <tr><td><b>Type:</b></td><td>{{movieModel.Type}}</td></tr>
+    </table>
+    <img *ngIf="!movieModel.BadImage" class="poster-image" src="{{movieModel.Poster}}"
+      (error)="movieModel.BadImage=true" alt="Movie Image">  
+    <img *ngIf="movieModel.BadImage" class="poster-image" [src]="blankImgUrl" alt="Movie Image"> 
+  </div>
+  <a mat-raised-button class="section-top-padding" color="primary" routerLink="/movies">Back To Movies</a>
+</mat-card>
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="moviesDataSource" matSort>
+
+    <ng-container matColumnDef="ID">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ID}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="MovieService">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Movie Service </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.MovieServiceTitle}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Price">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Price | currency:''}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedMovieColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedMovieColumns;"></mat-row>
+  </mat-table>
+</div>

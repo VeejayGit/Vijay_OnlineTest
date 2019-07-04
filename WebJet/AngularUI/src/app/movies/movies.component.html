@@ -1,0 +1,58 @@
+<mat-card>
+  <h1>Movies</h1>
+  <app-movie-service-availability [services]="services"></app-movie-service-availability>
+</mat-card>
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="moviesDataSource">
+
+    <ng-container matColumnDef="ID">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ID}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="CinemaWorldId">
+      <mat-header-cell *matHeaderCellDef> Cinemaworld ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.CinemaWorldId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="FilmWorldId">
+      <mat-header-cell *matHeaderCellDef> FilmWorld ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.FilmWorldId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Title">
+      <mat-header-cell *matHeaderCellDef> TITLE </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Title}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Year">
+      <mat-header-cell *matHeaderCellDef> YEAR </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Year}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Type">
+      <mat-header-cell *matHeaderCellDef> TYPE </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Type}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Poster">
+      <mat-header-cell *matHeaderCellDef> POSTER </mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+        <img *ngIf="!element.BadImage" class="poster-image" src="{{element.Poster}}" (error)="element.BadImage=true" width="90" alt="Movie Image"> 
+        <img *ngIf="element.BadImage" class="poster-image" [src]="blankImgUrl" width="90" alt="Movie Image"> 
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Price">
+      <mat-header-cell *matHeaderCellDef> PRICES </mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+        <a mat-raised-button color="primary" routerLink="/movie" 
+        [queryParams]="{CinemaWorldId: element.CinemaWorldId, FilmWorldId: element.FilmWorldId}">See Prices</a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedMovieColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedMovieColumns;"></mat-row>
+  </mat-table>
+</div>

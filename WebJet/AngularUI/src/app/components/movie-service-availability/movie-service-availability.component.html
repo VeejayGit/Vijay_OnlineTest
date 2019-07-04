@@ -1,0 +1,8 @@
+<mat-chip-list id="movieServiceList">
+  <label for="movieServiceList"><b>Movie service availability: </b></label>
+  <mat-chip *ngFor="let service of services">{{service.Title}}
+    <mat-spinner *ngIf="movieLoadStatusVisible(service, 0)" [diameter]="25"></mat-spinner>
+    <mat-icon *ngIf="movieLoadStatusVisible(service, 1)">done</mat-icon>
+    <mat-icon *ngIf="movieLoadStatusVisible(service, 2)">error outline</mat-icon>
+  </mat-chip>
+</mat-chip-list>
